@@ -5,10 +5,20 @@ ns: NETWORK
 
 ```c
 // 0xC8BC2011F67B3411 0xCDC4A590
-BOOL NETWORK_CLAN_GET_MEMBERSHIP(int* p0, int* clanMembership, int p2);
+BOOL NETWORK_CLAN_GET_MEMBERSHIP(int* networkHandle, int* clanMembership, int membershipIndex);
 ```
 
-```
+Retrieves a membership for a player, from the cache (i.e. downloaded).
+
+## Parameters
+* **networkHandle**: A player network handle.
+* **clanMembership**: Output buffer for the membership data. Also known as "desc". 
+* **membershipIndex**: If the player has multiple crews/memberships, use [0-9], or -1 to get the active crew/membership.
+
+## Return value
+
+## Examples
+```c
 BOOL DEBUG_MEMBRESHIP(int Param)  
 {  
 	int membership;  
@@ -36,10 +46,3 @@ _0xF633805A(&membership, 35, &handle.netHandle);
 	}  
 }  
 ```
-
-## Parameters
-* **p0**: 
-* **clanMembership**: 
-* **p2**: 
-
-## Return value
