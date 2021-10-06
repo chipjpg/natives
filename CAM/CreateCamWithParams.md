@@ -5,7 +5,7 @@ ns: CAM
 
 ```c
 // 0xB51194800B257161 0x23B02F15
-Cam CREATE_CAM_WITH_PARAMS(char* camName, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, BOOL p8, int p9);
+Cam CREATE_CAM_WITH_PARAMS(char* camName, float posX, float posY, float posZ, float rotX, float rotY, float rotZ, float fov, BOOL active, int p9);
 ```
 
 ```
@@ -29,7 +29,7 @@ Side Note: It seems p8 is basically to represent what would be the bool p1 withi
 * **rotY**: 
 * **rotZ**: 
 * **fov**: 
-* **p8**: 
+* **active**: 
 * **p9**: 
 
 ## Return value
